@@ -1,0 +1,15 @@
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\MainWindow.g.cs
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\App.g.cs
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin_MarkupCompile.cache
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin_MarkupCompile.lref
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\bin\Debug\CP_Konstantin.exe.config
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\bin\Debug\CP_Konstantin.exe
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\bin\Debug\CP_Konstantin.pdb
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\MainWindow.baml
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin.g.resources
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin.Properties.Resources.resources
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin.csproj.GenerateResource.Cache
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin.csproj.CoreCompileInputs.cache
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin.exe
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin.pdb
+C:\Users\v\source\repos\CP_Konstantin\CP_Konstantin\obj\Debug\CP_Konstantin.csprojResolveAssemblyReference.cache

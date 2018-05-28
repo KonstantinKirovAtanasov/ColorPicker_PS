@@ -1,0 +1,48 @@
+﻿<Window x:Class="CP_Konstantin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CP_Konstantin"
+        mc:Ignorable="d"
+        Title="Курсова Работа Константин 40група" ResizeMode="NoResize" Height="500" Width="800"  Background="AliceBlue" MouseMove="GlobalMouseMove">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Image x:Name="Colors" Source="{Binding Path=ImagePath}" Stretch="Fill" Margin="0,0,0,0" MouseMove="Colors_MouseOver" MouseLeftButtonDown="Colors_Click" MouseLeave="Colors_MouseLeave"/>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1" MouseLeave="Grid3MouseLeave">
+            <Label Name="RedSlLabel" Content="Red:  " Margin="5,5,0.4,95"></Label>
+            <Slider Name="RedSlider"  Value="{Binding Path=BindingInfo.MouseOverColor.Color.R, Mode=TwoWay}"  Minimum="0" Maximum="255" Margin="100,5,0.4,95" />
+            <Label Name="GreenSlLabel" Content="Green:" Margin="5,35,0.4,65"></Label>
+            <Slider Name="GreenSlider" Value="{Binding Path=BindingInfo.MouseOverColor.Color.G, Mode=TwoWay}" Minimum="0" Maximum="255" Margin="100,35,0.4,65"/>
+            <Label Name="BlueSlLabel" Content="Blue: " Margin="5,65,0.4,35"></Label>
+            <Slider Name="BlueSlider" Value="{Binding Path=BindingInfo.MouseOverColor.Color.B, Mode=TwoWay}" Minimum="0" Maximum="255" Margin="100,65,0.4,35"/>
+            <Label Name="AlphaSlLabel" Content="Alpha:" Margin="5,95,0.4,5"></Label>
+            <Slider Name="AlphaSlider" Value="{Binding Path=BindingInfo.MouseOverColor.Color.A, Mode=TwoWay}" Minimum="0" Maximum="255" Margin="100,95,0.4,5"/>
+            <Label Name="OverAll" Content="{Binding Path=BindingInfo.RGB}" Margin="5,125,210.2,35"></Label>
+            <Label Name="HexCode" Content="{Binding Path=BindingInfo.HEX}" Margin="5,160,210.2,5"></Label>
+            <Rectangle Name="CurrentMouseOver" Fill="{Binding Path=BindingInfo.MouseOverColor}" Margin="375,136,5,10" ></Rectangle>
+            <Rectangle Name="CurrentSelected" Fill="{Binding Path=BindingInfo.SelectedColor}" Margin="250,136,125,10" ></Rectangle>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Label Content="Brightness:" Margin="10,10,249.4,156"></Label>
+            <Slider Name="Brightness" Value="0" Minimum="-50" Maximum="+50" Margin="10,40,10.4,132" RenderTransformOrigin="0.528,0.64" ValueChanged="SetBrightness" MouseLeave="MouseLeaveBrightness"/>
+            <Label Content="Lumia:" Margin="10,64,249.4,102"></Label>
+            <Slider Name="Lumia" Value="0" Minimum="-50" Maximum="+50" Margin="10,94,10.4,78" ValueChanged="SetLumia" MouseLeave="MouseLeaveLumia" RenderTransformOrigin="0.5,0.5"></Slider>
+            <Button x:Name="GetColorReport" Content="Get Color Report (Copy)" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="310" Height="21" Background="#FFB4DCFA" FontWeight="Bold" FontStyle="Italic" Click="GetColorReport_Click"/>
+            <Button x:Name="RandomColor" Content="Get Random Color" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Width="310" Height="21" Background="#FFB4DCFA" FontWeight="Bold" FontStyle="Italic" Click="RandomColor_Click"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="0">
+            <GroupBox Content=" Color Information" Margin="10,10,10,10"></GroupBox>
+            <TextBox IsManipulationEnabled="False"  Height="222" Margin="20,35,20,20" TextWrapping="Wrap" Text="{Binding Path=BindingInfo.ColorReport}" VerticalAlignment="Top" Width="288"/>
+        </Grid>
+    </Grid>
+</Window>
